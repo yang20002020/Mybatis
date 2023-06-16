@@ -1,10 +1,13 @@
 package com.fuyu.mapper;
+
 import com.fuyu.pojo.User;
+
 import java.util.List;
 
 public interface UserMapper {
 
-    List<User> selectAll();
+   List<User> selectAll();
+
 
    User selectById(int id);
 }
