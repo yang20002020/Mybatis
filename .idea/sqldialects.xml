@@ -2,6 +2,8 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/Demo12/src/main/resources/com/fuyu/mapper/BrandMapper.xml" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Demo13/src/main/resources/com/fuyu/mapper/BrandMapper.xml" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/Demo14/src/main/resources/com/fuyu/mapper/BrandMapper.xml" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/Demo9/src/main/resources/com/fuyu/mapper/BrandMapper.xml" dialect="MySQL" />
   </component>
 </project>

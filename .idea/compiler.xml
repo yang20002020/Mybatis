@@ -8,16 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Demo2" />
         <module name="Demo1" />
-        <module name="Demo8" />
         <module name="Demo12" />
+        <module name="Demo13" />
+        <module name="Demo14" />
+        <module name="Demo10" />
+        <module name="Demo11" />
+        <module name="Demo8" />
         <module name="Demo7" />
         <module name="Demo9" />
         <module name="Demo4" />
         <module name="Demo3" />
         <module name="Demo6" />
-        <module name="Demo10" />
         <module name="Demo5" />
-        <module name="Demo11" />
       </profile>
     </annotationProcessing>
   </component>
