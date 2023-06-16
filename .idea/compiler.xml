@@ -14,6 +14,7 @@
         <module name="Demo4" />
         <module name="Demo3" />
         <module name="Demo6" />
+        <module name="Demo10" />
         <module name="Demo5" />
       </profile>
     </annotationProcessing>
