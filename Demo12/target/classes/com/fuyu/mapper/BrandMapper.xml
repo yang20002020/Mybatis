@@ -25,6 +25,7 @@
         select * from tb_brand where id=#{id};
     </select>
 
+
     <!---
   动态条件查询
     -->
@@ -32,12 +33,12 @@
      select * from tb_brand
      where
         <if test="status !=null">
-          status= #{status}
+            status= #{status}
         </if>
         <if test="companyName !=null and companyName!=''">
            and company_name like #{companyName}
         </if>
-        <if test="brand_name !=null  and brandName!='' ">
+        <if test="brandName !=null  and brandName!='' ">
             and brand_name like #{brandName}
         </if>
 
