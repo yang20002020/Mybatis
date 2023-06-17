@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Demo2" />
         <module name="Demo1" />
+        <module name="Demo16" />
         <module name="Demo12" />
         <module name="Demo13" />
         <module name="Demo14" />
