@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace  名称空间-->
+<mapper namespace="com.fuyu.mapper.BrandMapper">
+
+    <!--    resultMap 结果映射-->
+    <!--    id :唯一标识-->
+    <!--    type： 映射的类型，支持别名-->
+    <resultMap id="brandResultMap" type="Brand">
+        <!--        id : 完成主键字段的映射-->
+        <!--        result：完成一般字段的映射-->
+        <!--        column : 表的字段名-->
+        <!--        property： 实体类的属性名-->
+        <result column="company_name" property="companyName"/>
+        <result column="brand_name" property="brandName"/>
+    </resultMap>
+
+
+    <select id="selectAll" resultMap="brandResultMap">
+        select *
+        from tb_brand;
+    </select>
+
+    <select id="selectBranfById" resultMap="brandResultMap">
+        select *
+        from tb_brand
+        where id = #{id};
+    </select>
+
+
+    <!---
+  动态条件查询
+    -->
+    <select id="selectByCondition" resultMap="brandResultMap">
+        select * from tb_brand
+        <where>
+            <if test="status !=null">
+                status= #{status}
+            </if>
+            <if test="companyName !=null and companyName!=''">
+                and company_name like #{companyName}
+            </if>
+            <if test="brandName !=null  and brandName!='' ">
+                and brand_name like #{brandName}
+            </if>
+        </where>
+
+    </select>
+    <select id="selectByConditionSingle" resultMap="brandResultMap">
+        select *
+        from tb_brand
+        <where>
+            <choose>   <!--相当于switch-->
+                <when test="status !=null">  <!--相当于case-->
+                    status= #{status}
+                </when>
+                <when test="companyName !=null and companyName!=''">  <!--相当于case-->
+                    company_name like #{companyName}
+                </when>
+                <when test="brandName !=null and brandName!=''">  <!--相当于case-->
+                    brand_name like #{brandName}
+                </when>
+
+            </choose>
+        </where>
+
+    </select>
+    <!--   主键返回-->
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        insert into tb_brand(brand_name, company_name, ordered, description, status)
+        values (#{brandName}, #{companyName}, #{ordered}, #{description}, #{status});
+    </insert>
+    <!--     修改数据-->
+    <update id="update">
+        update tb_brand
+        set brand_name= #{brandName},
+            company_name= #{companyName},
+            ordered= #{ordered},
+            description= #{description},
+            status= #{status}
+        where id = #{id};
+    </update>
+</mapper>
