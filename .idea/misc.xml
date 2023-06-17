@@ -11,6 +11,7 @@
     <file type="web" url="file://$PROJECT_DIR$/Demo15" />
     <file type="web" url="file://$PROJECT_DIR$/Demo16" />
     <file type="web" url="file://$PROJECT_DIR$/Demo17" />
+    <file type="web" url="file://$PROJECT_DIR$/Demo18" />
     <file type="web" url="file://$PROJECT_DIR$/Demo2" />
     <file type="web" url="file://$PROJECT_DIR$/Demo3" />
     <file type="web" url="file://$PROJECT_DIR$/Demo4" />
@@ -40,6 +41,7 @@
         <option value="$PROJECT_DIR$/Demo15/pom.xml" />
         <option value="$PROJECT_DIR$/Demo16/pom.xml" />
         <option value="$PROJECT_DIR$/Demo17/pom.xml" />
+        <option value="$PROJECT_DIR$/Demo18/pom.xml" />
       </list>
     </option>
   </component>
