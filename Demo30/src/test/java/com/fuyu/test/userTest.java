@@ -26,11 +26,9 @@ public class userTest {
         //执行方法
         String username="zhangsan";
         String password="123";
-        User user = userMapper.select(username, password);
+        User user = userMapper.selectById(1);
 
         System.out.println(user);
-        //提交事务
-        sqlSession.commit();
         //4.释放资源
         sqlSession.close();
     }
