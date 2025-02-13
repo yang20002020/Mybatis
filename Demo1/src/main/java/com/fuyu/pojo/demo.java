@@ -20,7 +20,7 @@ public class demo {
         //2. 获取sqlSession对象，用它来执行sql
         SqlSession sqlSession=sqlSessionFactory.openSession();
 
-        //3.执行sql
+        //3.执行sql      在文件userMapper.xml中，  test 是命名空间，selectAll是id
         List<User> users = sqlSession.selectList("test.selectAll");
         System.out.println(users);
         //4.释放资源
